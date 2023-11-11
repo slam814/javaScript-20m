@@ -6,14 +6,14 @@ for(var i = 1997; i <= 2023; i++){
 
 function isMoneUp(time){
     if(time > 7){
-        return true;
+        return "chad uthech";
     }
     else{
-        return false;
+        return "chad utha ni";
     }
 }
 
-var time = 5;
+var time = 10;
 
 var timeNow = isMoneUp(time);
 
