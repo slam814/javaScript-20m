@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Length Converter</h1>
+
+    <label for="meters">Meters:</label>
+    <input type="number" id="meters" placeholder="Enter meters" oninput="convertLength()">
+    
+    <br>
+    
+    <label for="feet">Feet:</label>
+    <input type="text" id="feet" placeholder="Result" disabled>
+
+    <script>
+        function convertLength() {
+            // Get the value in meters
+            let meters = parseFloat(document.getElementById('meters').value);
+
+            // Convert to feet (1 meter = 3.28084 feet)
+            let feet = meters * 3.28084;
+
+            // Display the result in the 'feet' input field
+            document.getElementById('feet').value = feet.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
